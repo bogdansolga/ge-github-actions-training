@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-    	   description: 'Test scenario tags'
-    	   required: false
-    	   type: boolean
+      description: 'Test scenario tags'
+    	required: false
+    	type: boolean
   	environment:
-       description: 'Environment to run in'
-       type: environment
-       required: true
+      description: 'Environment to run in'
+      type: environment
+      required: true
