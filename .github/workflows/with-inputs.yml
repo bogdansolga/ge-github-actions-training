@@ -1,0 +1,12 @@
+name: Workflow with inputs
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+    	   description: 'Test scenario tags'
+    	   required: false
+    	   type: boolean
+  	environment:
+       description: 'Environment to run in'
+       type: environment
+       required: true
