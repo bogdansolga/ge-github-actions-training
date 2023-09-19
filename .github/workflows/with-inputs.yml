@@ -3,10 +3,20 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-      description: 'Test scenario tags'
-    	required: false
-    	type: boolean
-  	environment:
-      description: 'Environment to run in'
-      type: environment
-      required: true
+        description: 'Test scenario tags'
+    	  required: false
+    	  type: boolean
+      environment:
+        description: 'Environment to run in'
+        type: environment
+        required: true
+jobs:
+  display_inputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Tags: $TAGS"
+        echo "Environment: $ENVIRONMENT"
+    	 env:
+        TAGS: ${{ inputs.tags }}
+        ENVIRONMENT: ${{ inputs.environment }}
